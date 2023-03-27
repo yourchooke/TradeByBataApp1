@@ -33,7 +33,7 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "bubble.left")
                 }
-            ProfileView(viewModel: ProfileViewModel(user: StorageManager.shared.getLogged()!))
+            ProfileView(viewModel: ProfileViewModel(user: StorageManager.shared.getLogged() ?? UserManager()))
                 .tabItem {
                     Image(systemName: "person")
                 }
